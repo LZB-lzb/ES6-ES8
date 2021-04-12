@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const xiaoji=['小黄鸡','脆皮鹦鹉','虎皮鹦鹉']
+        // of 保存值(键值)
+        for(let j of xiaoji){
+            console.log(j)
+        }
+        // in 保存下标(键名)
+        for(let j in xiaoji){
+            console.log(j)
+        }
+
+        let it=xiaoji[Symbol.iterator]()
+        console.log(it.next())
+        console.log(it.next())
+        console.log(it.next())
+        console.log(it.next())
+</script>
+</body>
+</html>

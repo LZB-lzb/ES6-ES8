@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sendajax(url) {
+            return new Promise((res, rej) => {
+                const xhr = new XMLHttpRequest()
+                xhr.open("GET", url)
+                xhr.send()
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status >= 200 && xhr.status < 300) {
+                            res(xhr.response)
+                        } else {
+                            rej(xhr.status)
+                        }
+                    }
+                }
+            })
+        }
+        // promise方法
+        // const result = sendajax("https://api.apiopen.top/getJoke").then(val => {
+        //     console.log(val)
+        //     console.log(1)
+        // }, err => {
+        // })
+
+        async function main(){
+            let r=await sendajax("https://api.apiopen.top/getJoke")
+            console.log(r)
+            console.log(1)
+        }
+        main()
+    </script>
+</body>
+
+</html>

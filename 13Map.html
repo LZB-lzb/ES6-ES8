@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let m =new Map()
+        m.set('name','小黄鸡')
+        m.set('change',function(){
+            console.log('小黄鸡，小呀小黄鸡')
+        })
+        let key={
+            school:'xiaoji'
+        }
+        m.set(key,['小黄鸡','脆皮鹦鹉'])
+        // m.delete('name')
+        console.log(m)
+        console.log(m.get('name'))
+        console.log(m.get('change'))
+        console.log(m.get(key))
+        // m.clear()
+        console.log(m.size)
+        for(let v of m){
+            console.log(v)
+        }
+</script>
+</body>
+
+</html>

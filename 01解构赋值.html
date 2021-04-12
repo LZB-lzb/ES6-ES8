@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const F4 = ['小黄鸡', '脆皮鹦鹉', '虎皮鹦鹉']
+        
+        let [x, c, h] = F4
+        console.log(x, c, h)
+
+        let a = F4
+        console.log(a)
+
+        const yingwu={
+            name:'小黄鸡',
+            age:'6',
+            sleeping:function(){
+                console.log('小黄鸡睡觉')
+            }
+        }
+        let {name,age,sleeping}=yingwu
+        console.log(name)
+        console.log(age)
+        console.log(sleeping)
+        sleeping()
+    </script>
+</body>
+
+</html>

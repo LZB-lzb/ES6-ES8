@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function one() {
+            setTimeout(() => {
+                console.log(1)
+                let user = '用户数据'
+                it.next(user)
+            }, 1000)
+        }
+        function two() {
+            setTimeout(() => {
+                console.log(2)
+                let order = '订单数据'
+                it.next(order)
+            }, 2000)
+        }
+        function three() {
+            setTimeout(() => {
+                console.log(3)
+                let good = '商品数据'
+                it.next(good)
+            }, 3000)
+        }
+        function* get() {
+            let user = yield one();
+            console.log(user)
+            let order = yield two();
+            console.log(order)
+            let good = yield three();
+            console.log(good)
+        }
+        let it = get()
+        it.next()
+    </script>
+</body>
+
+</html>

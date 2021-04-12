@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function fun(){
+        //     var a=1
+        //         a++
+        //     return function(){
+        //         a++
+        //          console.log(a)
+        //     }
+        // }
+        // var fun2=fun()
+        // fun2()
+        // fun2()
+        // console.log(fun2.a)
+            
+
+        function fun(n,o){
+            console.log(o)
+            return {
+                fun:function(m){
+                    return fun(m,n)
+                }
+            }
+        }
+        var a=fun(0)
+        a.fun(1)
+        a.fun(2)
+
+        var b=fun(0).fun(1).fun(2).fun(50).fun(51)
+    </script>
+</body>
+
+</html>

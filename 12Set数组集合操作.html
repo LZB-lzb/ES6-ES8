@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = ['小黄鸡', '脆皮鹦鹉', '虎皮鹦鹉', '小黄鸡']
+        let a2 = ['虎皮鹦鹉', '小黄鸡','混进来的海绵宝哥']
+        // 数组去重
+        // let s = [...new Set(a)] 展开输出
+        let s = new Set(a)
+        let s2 = new Set(a2)
+        // 交集
+        // let result = [...new Set(a)].filter(item => {
+        //     if (s2.has(item)) {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+        // })
+        let result = [...s].filter(item => s2.has(item))
+        console.log('交集',result)
+        //并集 
+        let union=[...new Set([...a,...a2])]
+        console.log('并集',union)
+        // 差集
+        let diff= [...s2].filter(item => !s.has(item))
+        console.log('差集',diff)
+        console.log(s,typeof s)
+
+    </script>
+</body>
+
+</html>

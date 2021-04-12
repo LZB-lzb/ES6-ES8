@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getname() {
+            console.log(this.name)
+        }
+        getname2 = () => {
+            console.log(this.name)
+        }
+        window.name = '小黄鸡'
+        getname()
+        getname2()
+
+        const obj = {
+            name: '脆皮鹦鹉'
+        }
+        getname.call(obj)
+        getname2.call(obj)
+
+        function fn() {
+            console.log(arguments)
+        }
+        fn()
+        // 箭头函数用arguments会报错
+        let add = (n) => {
+            return n * n
+        }
+        console.log(add(3))
+        // 省略括号
+        let add1 = n => {
+            return n * n
+        }
+        console.log(add1(3))
+        // 去花括号则return必须省略
+        let add2 = n => n * n
+
+        console.log(add2(3))
+    </script>
+</body>
+
+</html>

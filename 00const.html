@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 由于有变量提升，所以不会报错
+        console.log(a)
+        var a=1
+        console.log(a)
+        // 由于没有变量提升，会报错
+        // console.log(b,c)
+        let b=2
+        const c=3
+        console.log(b,c)
+
+        const num=['哈哈','呵呵','霍霍']
+        console.log(num)
+        // 由于num指向没变所以不会报错
+        num.push('哈哈哈')
+        console.log(num)
+        
+        // 这两种都改变了num指向，会报错
+        // const num=1
+        // num=1
+    </script>
+</body>
+</html>

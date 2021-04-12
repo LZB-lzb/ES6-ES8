@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Phone{
+            get price(){
+                console.log('不能被s.price()调用，可以被s.price调用')
+                return '这是打印s.price输出的'
+            }
+            set price(val){
+                console.log('s.price=xxx可以调用')
+            }
+            call(){
+                console.log('可以直接被s.call()调用')
+            }
+        }
+        let s=new Phone()
+        s.call()
+        s.price=1
+        console.log(s.price)
+   
+    </script>
+</body>
+
+</html>

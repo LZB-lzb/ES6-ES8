@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        const F4 = ['小黄鸡', '脆皮鹦鹉', '虎皮鹦鹉']
+        function kaorou(){
+            console.log(arguments)
+        }
+        kaorou(F4)
+        kaorou(...F4)
+        const F3 = ['大黄鸡', '脆皮鹦鹉', '虎皮鹦鹉']
+        const f1=F4.concat(F3)
+        const f2=[...F4,...F3]
+        console.log(f1)
+        console.log(f2)
+
+        // 将伪数组转为真正的数组
+        const divs=document.querySelectorAll('div')
+        console.log(divs,typeof divs)
+        const divArr=[...divs]
+        console.log(divArr,typeof divArr)
+    </script>
+</body>
+
+</html>

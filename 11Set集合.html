@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Set有自动去重功能
+        let s = new Set(['小黄鸡', '脆皮鹦鹉', '虎皮鹦鹉', '小黄鸡'])
+        console.log(s)
+        console.log([...s])
+        console.log(s.size)
+        s.add('大黄鸡')
+        // s.delete('大黄鸡')
+        // s.clear()
+        let x = s.has('大黄鸡')
+        // console.log([...s].includes(1))
+        console.log(x)
+        console.log(s)
+
+        for (let v of s) {
+            console.log(v)
+        }
+
+        arr = [1, 2,2, 3, 4, 2, 5]
+        // let arr1 = [...arr]
+        // forEach不可用于删除数组元素，会导致索引混乱
+        // arr1.forEach((i, index) => { if (i == 2) { arr1.splice(index, 1) } })
+        
+        // filter不会改变原数组
+        var arr2 = arr.filter(value => {
+            // console.log(value)
+            return value != 2
+        })
+        console.log(arr)
+        console.log(arr.includes(6))
+        console.log(arr.includes(1))
+        // console.log(arr1)
+        console.log(arr2)
+
+        var htt="http://baidu.com"
+        console.log(htt.indexOf('1'))
+        // indexOf返回下标，无则返回-1
+        console.log(htt.includes('1'))
+        //  includes返回true或false
+        
+        console.log(2**4)
+        console.log(3**3)
+</script>
+</body>
+
+</html>
