@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="ip1" placeholder="防抖哥">
+    <input type="text" id="ip2" placeholder="节流哥">
+    <script>
+        let ip1 = document.getElementById('ip1')
+        let ip2 = document.getElementById('ip2')
+
+        // 防抖
+        var timer
+        function sendmsg(e) {
+            clearTimeout(timer)
+            timer = setTimeout(() => {
+                console.log(e)
+            }, 500)
+        }
+
+        ip1.addEventListener('keydown', function () {
+            sendmsg(ip1.value)
+        })
+
+        // 节流
+        var lastime
+        function sendmsg2(e) {
+            var newtime = new Date()
+            if (!lastime || newtime - lastime > 1000) {
+                console.log(e)
+                lastime = newtime
+            }
+        }
+        ip2.addEventListener('keydown', function () {
+            sendmsg2(ip2.value)
+        })
+    </script>
+</body>
+
+</html>
